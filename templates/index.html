@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML MODEL</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Covid-19 Severity Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="MCHC" placeholder="MCHC" required="required" /><br>
+    	<input type="text" name="Mean corpuscular hemoglobin (MCH)" placeholder="MCH" required="required" /><br>
+        <input type="text" name="Eosinophils" placeholder="Eosinophils" required="required" /><br>
+        <input type="text" name="Red blood cell distribution width (RDW)" placeholder="RDW" required="required" /><br>
+        <input type="text" name="Proteina C reativa mg/dL" placeholder="Proteina C reativa mg/dL" required="required" /><br>
+        
+       
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
