@@ -24,16 +24,16 @@
                 <input type="text" class="form-control" name="MCHC" placeholder="MCHC" required="required">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="Mean corpuscular hemoglobin (MCH)" placeholder="MCH" required="required">
+                <input type="text" class="form-control" name="Mean corpuscular hemoglobin (MCH)" placeholder="MCH*" required="required">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="Eosinophils" placeholder="Eosinophils" required="required">
+                <input type="text" class="form-control" name="Eosinophils" placeholder="Eosinophils*" required="required">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="Red blood cell distribution width (RDW)" placeholder="RDW" required="required">
+                <input type="text" class="form-control" name="Red blood cell distribution width (RDW)" placeholder="RDW*" required="required">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="Proteina C reativa mg/dL" placeholder="Proteina C reativa mg/dL" required="required">
+                <input type="text" class="form-control" name="Proteina C reativa mg/dL" placeholder="Proteina C reativa mg/dL*" required="required">
               </div>
               <button type="submit" class="btn btn-primary btn-block">Predict</button>
             </form>
@@ -41,8 +41,9 @@
         </div>
       </div>
     </div>
+    {{prediction_text}}
   </div>
-  {{prediction_text}}
+  
 </body>
 
 </html>
