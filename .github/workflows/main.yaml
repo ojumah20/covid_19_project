@@ -19,7 +19,7 @@ jobs:
 ### ⬇ IMPORTANT PART ⬇ ###
 
       - name: Build, Push and Release a Docker container to Render. # Your custom step name
-        uses: gonuit/render-docker-deploy@v1.3.3 # GitHub action name (leave it as it is).
+        uses: ttskch/render-deploy@v1.0.0 # GitHub action name (leave it as it is).
         with:
           # Below you must provide variables for your Heroku app.
 
@@ -33,7 +33,7 @@ jobs:
           render_api_key: ${{ secrets.RENDER_API_KEY }}
           
           # Name of the heroku application to which the build is to be sent.
-          render_app_name: ${{ secrets.RENDER_APP_NAME }}
+          service_id: ${{ secrets.RENDER_SERVICE_ID }}
 
           # (Optional, default: "./")
           # Dockerfile directory.
@@ -55,5 +55,6 @@ jobs:
           process_type: web
           
    
+  
           
 ### ⬆ IMPORTANT PART ⬆ ###
