@@ -42,34 +42,51 @@ The problem is the need for a machine learning model to accurately predict the s
 
 
 <div>
-<h3>Data Collection and Preprocessing</h3>
+<h3>Data Collection </h3>
 The dataset comprises records of 5644 patients, encompassing 111 parameters. Among these patients, only 558 tested positive for COVID-19 and fell within the 0 to 20 age quantiles. Notably, just 8.5% of positive cases necessitated hospital admission. Within this subset, 36 patients were placed in regular wards, 8 in semi-intensive units, and 8 in intensive care units, revealing a significant data imbalance. Patient information such as ID, age quantile, admission status, and results from various medical tests are included in the dataset. The admission status will serve as the target variable for predicting COVID-19 severity among positive patients.
+Original data souce is (https://www.kaggle.com/datasets/e626783d4672f182e7870b1bbe75fae66bdfb232289da0a61f08c2ceb01cab01/data)  while the data was uploaded to my google drive and mounted from there for the model development (https://drive.google.com/drive/folders/1CglWG0EouMz4BJNylNSBzQPuiWA2-9C9?usp=drive_link).
   
 </div>
 
+<h3>Exploratory Data Analysis (EDA)</h3>
+
+<h3>Data preprocessing</h3>
+The target variables (not admitted, admitted to regular ward, admitted to semi-intensive ward, and admitted to intensive ward) were merged into a single column with values 0, 1, 2, and 3 assigned to each class, respectively.
 
 
+
+
+
+
+
+
+<h3>Feature Engineering</h3>
 
 Feature Selection
+The Random Forest algorithm was used with Recursive Feature Elimination with Cross-Validated (RFECV) selection, with 100 estimators, a random state of 42, and 10 Kfold.This code performs feature selection using Recursive Feature Elimination with Cross-Validation (RFECV) technique.
 https://github.com/ojumah20/covid_19_project/blob/main/features.png
 
-
-
-
-
-
-
-<h3>Exploratory Data Analysis (EDA)</h3>
-<h3>Feature Engineering</h3>
 <h3> Model Selection and development</h3>
+
+
 <h3> Model evaluation </h3>
+
+
 <h3> Model deployment and App development</h3>
+
+
 <h3>Installation </h3>
+
 <h3>Usage</h3>
-<h3>Contributing</h3>
+
 <h3>Additional Information</h3>
+
 <h3>Limitations and Room for Contributions</h3>
-https://www.kaggle.com/datasets/e626783d4672f182e7870b1bbe75fae66bdfb232289da0a61f08c2ceb01cab01
+There is a need for error handling especailly when a user input a text or anything other than a float.
+The look and feel of the web app can also be improve. I am opened to open source contributions. 
+
+
+
 
 
 
@@ -79,6 +96,4 @@ https://www.kaggle.com/datasets/e626783d4672f182e7870b1bbe75fae66bdfb232289da0a6
 
 
 Further Work
-There is a need for error handling especailly when a user input a text or anything other than a float.
-The look and feel of the web app can also be improve. I am opened to open source contributions. 
 
