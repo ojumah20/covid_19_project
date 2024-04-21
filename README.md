@@ -1,5 +1,5 @@
 Covid-19 Serity Prediction App
-![alt text for screen readers](/path/to/image.png "Text to show on mouseover").
+![alt text for screen readers](https://github.com/ojumah20/covid_19_project/blob/main/COVID%20testing%20policy%20drupal.jpg "covid-19").
 A web app was developed to predict based on selected features if a patient has covid-19 and to what intensity. There are four levels being predicted for : no civid-19, regular case of covid-19, semi-intensive case and intensive.
 Intial dtaa source was made up 110 features which through feature selection wer streamlined to only five. 
 Data Source
