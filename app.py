@@ -27,9 +27,9 @@ def predict():
     
     # Interpret predictions
     if predictions[0] == 0:
-        predict_value = "not likely to have Covid-19"
+        predict_value = "does not need to be addmitted"
     elif predictions[0] == 1: 
-        predict_value = "likely to have a regular case of Covid-19"
+        predict_value = "likely to have a regular case of Covid-19 and is predicted to be admitted in a regular ward"
     elif predictions[0] == 2:
         predict_value = "likely to become semi-intensive and should be monitored closely"
     else:
