@@ -3,35 +3,24 @@
 <h3> Overview </h3>
 This project tackles the challenge of predicting COVID-19 severity in patients using machine learning. It provides a user-friendly web application built with Flask and Bootstrap, allowing users to input clinical data and receive predictions on potential disease severity.
 
-
-
-<div> 
-<h3>Aim</h3>
-This project aims to develop a machine learning model for predicting the severity risk of COVID-19 patients and deploy it as a web application using Flask and Bootstrap, allowing users to input new data for predictions, with automated deployment to Render facilitated through GitHub Actions.
+<div>
+  <h3>Key Features</h3>
+ <ul>
+   <li>
+     Machine learning models (XGBoost) for predicting COVID-19 severity levels.
+   </li>
+  <li>Interactive web app interface for user input and prediction results.</li>
+   <li>Docker containerization for efficient deployment.</li>
+ </ul>
+  
 </div>
+
 
 <div>
 <h3>Objectives </h3>
-  
-1. **Design of Experiments and Web Application Development:**
-   - Collect and analyze a dataset containing records of COVID-19 patients, focusing on demographic, clinical, and laboratory information.
-   - Create an web interface using Flask and Bootstrap to enable users to input data for predictions.
-   
-2. **Model Selection and Integration:**
-   - Develop machine learning models, including logistic regression and XGBoost, to predict the severity of COVID-19 cases.
-   - Incorporate the developed machine learning model into the web application, ensuring seamless interaction between user inputs and prediction outputs.
-
-3. **Model Evaluation and Deployment Automation:**
-   - Evaluate the performance of the developed models using precision, recall, and F1-score metrics.
-   - Establish automated workflows using GitHub Actions to streamline the deployment process of the web application to Render.
-
-4. **Hyperparameter Tuning and Testing:**
-   - Fine-tune the hyperparameters of the logistic regression model using GridSearchCV to optimize model accuracy and prevent overfitting.
-   - Conduct thorough testing of the web application to ensure functionality, performance, and security.
-
-5. **Conclusion and Further Work:**
-   - Conclude on the effectiveness of machine learning techniques in predicting COVID-19 severity and the usability of the deployed web application.
-   - Propose areas for further research, such as exploring advanced feature selection techniques and enhancing user experience for clinical decision-making.
+i. Develop a model to predict COVID-19 severity based on patient data.
+ii. Deploy the model as a web application for broader user access.
+iii. Automate deployment through a platform like Render.
 </div>
 
 
