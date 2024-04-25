@@ -132,6 +132,8 @@ Original data souce is (https://www.kaggle.com/datasets/e626783d4672f182e7870b1b
 To install, fork the repository, clone to github desktop and open with VS code, run the web app local using python app.py.
 <h3>Usage</h3>
 The webapp can be access through https://coding-project.onrender.com
+   <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.54.jpeg" alt="webapp_deployment" title="webapp">
+
   
 </div>
 
