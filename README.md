@@ -99,3 +99,26 @@
     <p> This project demonstrates the feasibility of applying machine learning to predict COVID-19 severity. The developed web app offers a convenient tool for healthcare professionals or researchers to gain insights into potential disease course. We encourage contributions and feedback to further refine and improve this project.</p>
 
 </div>
+
+#machinelearning
+#datascience
+#artificialintelligence
+#covid19
+#healthcare
+#webdevelopment
+#webapplication
+#flask
+#bootstrap
+#opentosource
+#project
+#mlops
+#modeldeployment
+#covid19prediction
+#covidseverity
+#xgboost (if your project uses XGBoost)
+#featureengineering
+#datascaling
+#modeloperation
+#deployment
+#docker
+#render
