@@ -49,7 +49,7 @@
     <h3> 5. Methodology </h3>
     <p> The XGBoost algorithm, known for its efficiency and accuracy in classification tasks, was chosen for predicting COVID-19 severity. Other classification models like random forest was explored based on popularity from literature reviewed. Building with 18 features after preprocessing appeared unrealistic , hence ploting the feature importance curve to determine the optimal number of features was important. </p>
     <img src="https://github.com/ojumah20/covid_19_project/blob/main/feature%20importance.png" alt="Feature Importance curve" title="Covid-19 Features_curve">
-    <p>Based on the curve, the top five features were selected.</p>
+    <p>Based on the curve, the top five features were selected. The features selected were mean corpuscular hemoglobin concentration, Mean corpuscular hemoglobin, Red cell distribution width, Eosinophils and Proteina C reativa mg/dL</p>
     
 </div>
 
