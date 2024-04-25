@@ -123,6 +123,7 @@ Original data souce is (https://www.kaggle.com/datasets/e626783d4672f182e7870b1b
 <div>
 <h3>Dockerfile Deployment</h3>
 <p>The Dockerfile, which encapsulates the web app and model, is deployed to Render. Render was chosen as the deployment platform because it offers a free tier for hobbyists to showcase their work.</p>
+  <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.41.jpeg" alt="Render_deployment" title="Render">
   
 </div>
 
