@@ -1,30 +1,31 @@
 # Covid-19 Severity Prediction App
-<p> This project tackles the challenge of predicting COVID-19 severity in patients using machine learning. It provides a user-friendly web application built with Flask and Bootstrap, allowing users to input clinical data and receive predictions on potential disease severity.</p>
-<h3>Key Features </h3>
-<ul><li>
-Machine learning models (XGBoost) for predicting COVID-19 severity levels.
-</li>
-<li>Interactive web app interface for user input and prediction results.</li>
-<li>Docker containerization for efficient deployment.</li>
-</ul>
-
+<div> 
+    <p> This project tackles the challenge of predicting COVID-19 severity in patients using machine learning. It provides a user-friendly web application built with Flask and Bootstrap, allowing users to input clinical data and receive predictions on potential disease severity.</p>
+    <h3>Key Features </h3>
+    <ul>
+        <li>
+        Machine learning models (XGBoost) for predicting COVID-19 severity levels.
+        </li>
+        <li>Interactive web app interface for user input and prediction results.</li>
+        <li>Docker containerization for efficient deployment.</li>
+    </ul>
+    
 <h3>Project Goals </h3>
-<ul><li>
-Develop a model to predict COVID-19 severity based on patient data.
-</li>
-<li>Deploy the model as a web application for broader user access.</li>
-<li>Automate deployment through a platform like Render.</li>
-</ul>
+<ul>
+        <li>
+        Develop a model to predict COVID-19 severity based on patient data.
+        </li>
+        <li>Deploy the model as a web application for broader user access.</li>
+        <li>Automate deployment through a platform like Render.</li>
+    </ul>
+
+</div>
+
 
 ![covid_19](https://github.com/ojumah20/covid_19_project/blob/main/COVID%20testing%20policy%20drupal.jpg "Covid_19")
-
-<h3> Overview </h3>
-SARS-CoV-2, the virus behind the COVID-19 pandemic, emerged in Wuhan, China in December 2019 and rapidly spread worldwide, causing significant social and economic disruptions. Despite vaccination efforts and medical advancements, the virus remains a major global health concern, with over 763 million confirmed cases and 6 million reported deaths as of the latest data. The influx of COVID-19 patients has strained healthcare systems, requiring efficient resource allocation and patient prioritization based on severity. Current diagnostic methods can detect the presence of the virus but not the severity of the illness, necessitating supplementary approaches like blood testing, serology, medical imaging, and clinical notes analysis. However, the multitude of parameters from these tests can be challenging for physicians to interpret. Utilizing statistical or machine learning methods could help analyze these parameters and predict COVID-19 severity more accurately, ultimately improving patient outcomes by identifying patterns and providing precise prognostic information.
-A web app was developed to predict based on selected features if a patient has covid-19 and to what intensity. 
-
-<div> 
-<h3>Aim</h3>
-This project aims to develop a machine learning model for predicting the severity risk of COVID-19 patients and deploy it as a web application using Flask and Bootstrap, allowing users to input new data for predictions, with automated deployment to Render facilitated through GitHub Actions.
+<div>
+    <h3> 1. Introduction </h3>
+    <p> The COVID-19 pandemic has significantly impacted global health. Traditional diagnostic methods primarily focus on virus detection, but don't always predict disease severity. This project explores using machine learning to analyze patient data and predict potential COVID-19 severity levels.</p>
 </div>
 
 <div>
