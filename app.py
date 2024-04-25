@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
 from flask import Flask, request, render_template
+
 my_app = Flask(__name__)
 
 # Load the model
@@ -13,7 +14,17 @@ def home():
 @my_app.route('/predict', methods=['POST'])
 def predict():
     # Get form data
-    data = [float(x) for x in request.form.values()]
+    form_values = request.form.values()
+    
+    # Check if all fields are filled
+    if not all(form_values):
+        return render_template("index.html", prediction_text="Please fill all input fields")
+    
+    try:
+        # Convert form data to float
+        data = [float(x) for x in form_values]
+    except ValueError:
+        return render_template("index.html", prediction_text="Please enter numeric values only")
     
     # Convert features to a numpy array
     X = np.array([data])
@@ -21,13 +32,9 @@ def predict():
     # Make predictions
     predictions = xgboostmodel.predict(X)
     
-    
-    # Print predictions
-    print("Predictions:", predictions)
-    
     # Interpret predictions
     if predictions[0] == 0:
-        predict_value = "does not need to be addmitted"
+        predict_value = "does not need to be admitted"
     elif predictions[0] == 1: 
         predict_value = "likely to have a regular case of Covid-19 and is predicted to be admitted in a regular ward"
     elif predictions[0] == 2:
