@@ -28,107 +28,38 @@
     <p> The COVID-19 pandemic has significantly impacted global health. Traditional diagnostic methods primarily focus on virus detection, but don't always predict disease severity. This project explores using machine learning to analyze patient data and predict potential COVID-19 severity levels.</p>
 </div>
 
-<div>
-<h3>Objectives </h3>
-  
-1. **Design of Experiments and Web Application Development:**
-  - Collect and analyze a dataset containing records of COVID-19 patients, focusing on demographic, clinical, and laboratory information.
-  - Create an web interface using Flask and Bootstrap to enable users to input data for predictions.
-  
-2. **Model Selection and Integration:**
-  - Develop machine learning models, including logistic regression and XGBoost, to predict the severity of COVID-19 cases.
-  - Incorporate the developed machine learning model into the web application, ensuring seamless interaction between user inputs and prediction outputs.
-
-3. **Model Evaluation and Deployment Automation:**
-  - Evaluate the performance of the developed models using precision, recall, and F1-score metrics.
-  - Establish automated workflows using GitHub Actions to streamline the deployment process of the web application to Render.
-
-4. **Hyperparameter Tuning and Testing:**
-  - Fine-tune the hyperparameters of the logistic regression model using GridSearchCV to optimize model accuracy and prevent overfitting.
-  - Conduct thorough testing of the web application to ensure functionality, performance, and security.
-
-5. **Conclusion and Further Work:**
-  - Conclude on the effectiveness of machine learning techniques in predicting COVID-19 severity and the usability of the deployed web application.
-  - Propose areas for further research, such as exploring advanced feature selection techniques and enhancing user experience for clinical decision-making.
-</div>
-
 
 
 <div>
-<h3>Problem Statement </h3>
-The problem is the need for a machine learning model to accurately predict the severity risk of COVID-19 patients, facilitating efficient resource allocation and improved patient care in light of traditional diagnostic limitations and the complexity of patient data.
- </div>
-
-
-<div>
-<h3>Data Collection </h3>
-The dataset comprises records of 5644 patients, encompassing 111 parameters. Among these patients, only 558 tested positive for COVID-19 and fell within the 0 to 20 age quantiles. Notably, just 8.5% of positive cases necessitated hospital admission. Within this subset, 36 patients were placed in regular wards, 8 in semi-intensive units, and 8 in intensive care units, revealing a significant data imbalance. Patient information such as ID, age quantile, admission status, and results from various medical tests are included in the dataset. The admission status will serve as the target variable for predicting COVID-19 severity among positive patients.
-Original data souce is (https://www.kaggle.com/datasets/e626783d4672f182e7870b1bbe75fae66bdfb232289da0a61f08c2ceb01cab01/data) while the data was uploaded to my google drive and mounted from there for the model development (https://drive.google.com/drive/folders/1CglWG0EouMz4BJNylNSBzQPuiWA2-9C9?usp=drive_link).
-  
-</div>
-
-
-<div>
- <h3>Exploratory Data Analysis (EDA)</h3>
- <p>The first step was understanding the data, which revealed that it comprises both positive and negative cases. Since the focus is on classifying the severity of COVID-19, the analysis will only consider positive cases. All negative cases have been removed. The image below illustrates the comparison between positive and negative cases in the dataset using the 'SARS-Cov-2 exam result' column.</p>
- <img src="https://github.com/ojumah20/covid_19_project/blob/main/cases.png" alt="Covid-19 cases" title="Covid-19 cases">
-
- <p>Among the positive cases, columns [Patient addmited to regular ward (1=yes, 0=no),	Patient addmited to semi-intensive unit (1=yes, 0=no),	Patient addmited to intensive care unit (1=yes, 0=no)] allows us to know the severity of the covid-19 cases and would be used in creatin the target variables </p>
+    <h3>2. Data Acquisition and Preprocessing </h3>
+    <p> The dataset used for this project was obtained from Kaggle [https://www.kaggle.com/datasets/e626783d4672f182e7870b1bbe75fae66bdfb232289da0a61f08c2ceb01cab01/data]. It contains various clinical features for patients diagnosed with COVID-19. Data cleaning and preprocessing steps were performed to handle missing values, outliers, and ensure data quality. Techniques like SMOTE were used to address data class imbalance. The image below illustrates the comparison between positive and negative cases in the dataset using the 'SARS-Cov-2 exam result' column</p> <img src="https://github.com/ojumah20/covid_19_project/blob/main/cases.png" alt="Covid-19 cases" title="Covid-19 cases">
+<p>Among the positive cases, columns [Patient addmited to regular ward (1=yes, 0=no),Patient addmited to semi-intensive unit (1=yes, 0=no),	Patient addmited to intensive care unit (1=yes, 0=no)] allows us to know the severity of the covid-19 cases and would be used in creatin the target variables </p>
  <img src="https://github.com/ojumah20/covid_19_project/blob/main/cases_1.png" alt="Covid-19 cases" title="Covid-19 Positive cases">
-<p>From the exploration conducted so far, it is evident that only 558 patients tested positive. Among them, a mere 8.5% required hospital admission. Specifically, 36 were placed in regular wards, 8 in semi-intensive units, and 8 in intensive care units, highlighting a significant imbalance in the data.</p>
-<p>Further exploration of the data can involve investigating how various variables influence one other.</p>
-
+  
 </div>
 
-
 <div>
- <h3>Data preprocessing</h3>
- <ul>
-  <li>Removed all negative cases and the 'SARS-Cov-2 exam result' column since it will only contain 'postive' as value.</li>
-  <li>Dropped duplicates. Define what missing values are and drop columns with up to 92% missing values .</li> 
-  <li>Replaced mising values in the categorical columns with 'missing' and that of the numeric columns with the mean.</li> 
-  <li>Used correlation co-efficient to remove one of two columns that are hgihly correlated</li>
- </ul>
-</div>
-
-
-<div>
-
- <h3>Feature Engineering</h3>
- <ul><li>Performed Label encoding all independent categorical features using skit-learn 'Labelencoder'</li>
-  <li>Merged three columns [Patient addmited to regular ward (1=yes, 0=no),	Patient addmited to semi-intensive unit (1=yes, 0=no),	Patient addmited to intensive care unit (1=yes, 0=no)] and encode them from 1-3. Encode no addmission as 0. View ipynb file for more information'</li>
-  <li> Performed Synthetic Minority Over-sampling Technique due to the imbalance observed </li>
-  <li>Used the Random Forest algorithm with Recursive Feature Elimination with Cross-Validated (RFECV) selection, with 100 estimators, a random state of 42, and 10 k-fold. further explaination can be found in the ipynb file </li>
-  <li><img src="https://github.com/ojumah20/covid_19_project/blob/main/features.png" alt="Feature Importance" title="Covid-19 Features"> </li>
-  <li>The independent variables were scaled using StandardScaler. This helped to standardize the range of features in the dataset so that they have similar means and standard deviations. This step ensured that the model does not place more meaning on a feature over the others, which could create bias. </li>
- </ul>
+    <h3> 3. Feature Engineering</h3>
+    <p> The feature engineering stage involved label encoding categorical features using scikit-learn's LabelEncoder. Additionally, three admission-related columns were merged into a single feature with labels ranging from 1 (regular ward admission) to 3 (intensive care unit admission), with 0 representing no admission. Furthermore, I utilized Random Forest with Recursive Feature Elimination with Cross-Validation (RFECV) for feature selection, with details available in the provided Jupyter notebook. Feature importance was visualized <img src="https://github.com/ojumah20/covid_19_project/blob/main/features.png" alt="Feature Importance" title="Covid-19 Features">, and finally, I standardized the independent variables using StandardScaler to prevent bias in model training by ensuring all features have similar scales.</p>
 
   
 </div>
 
-
-
-
-<div> 
- <h3> Model Selection and development</h3>
-  
- <p> Two classification models were selected based on their popularities and high perfomance in literatures reviewed. Since it is a classification problem, other classification models can be explored to see the impact on performance. The Random Forest model was trained with n_estimators=1000, max_depth=10, and random_state=0. Finally, the XGBClassifier was trained with n_estimators=1000 and learning_rate=0.05 were compared and the XGBoost gave the better performnce with up to 99% across evaluation metrics however for the two models,the not admitted cases and regular cases are misclassified which is not a big case in the context of this project. </p>
-<p>Building the web app with 18 fearures felt like a lot of inputs needed from new users , hence the model was retrained with the top five features based on the plotted feature importance during feature engineering. The top five features was selected based on the elblow method on the ploted Cross validation score versus number of features.</p>
-<img src="https://github.com/ojumah20/covid_19_project/blob/main/feature%20importance.png" alt="Feature Importance curve" title="Covid-19 Features_curve">
-
-
+<div>
+    <h3> 5. Methodology </h3>
+    <p> The XGBoost algorithm, known for its efficiency and accuracy in classification tasks, was chosen for predicting COVID-19 severity. Other classification models like random forest was explored based on popularity from literature reviewed. Building with 18 features after preprocessing appeared unrealistic , hence ploting the feature importance curve to determine the optimal number of features was important. </p>
+    <img src="https://github.com/ojumah20/covid_19_project/blob/main/feature%20importance.png" alt="Feature Importance curve" title="Covid-19 Features_curve">
+    <p>Based on the curve, the top five features were selected.</p>
+    
 </div>
 
 
 
 <div>
- <h3> Model evaluation </h3>
- <p>The evaluation metrics used for the model were accuracy, precision, recall, and F1-score.These metrics are crucial in clinical data analysis for evaluating the model's ability to identify patients who require intensive care and minimizing the risk of falsely identifying patients who do not need it. A higher value for these metrics indicates better model performance.
- The result were <img src="https://github.com/ojumah20/covid_19_project/blob/main/model_result.png" alt="model_result" title = "model_result"></p>
- <p>The XGBoost model was saved as a pickel file to be used on new data input through the web app</p>
- <p> More details of the model evaluation can be found in the ipynb file.</p>
-
-  
+     <h3> 4. Model Evaluation </h3>
+     <p>The evaluation metrics used for the model were accuracy, precision, recall, and F1-score.These metrics are crucial in clinical data analysis for evaluating the model's ability to identify patients who require intensive care and minimizing the risk of falsely identifying patients who do not need it. A higher value for these metrics indicates better model performance. The result were</p>
+    <img src="https://github.com/ojumah20/covid_19_project/blob/main/model_result.png" alt="model_result" title = "model_result"> 
+    <p> The XGBoost model was saved as a pickel file to be used on new data input through the web app.</p>  
 </div>
 
 
