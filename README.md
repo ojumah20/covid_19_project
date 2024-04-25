@@ -65,6 +65,9 @@
 
 
 <div>
+    5. Web Application Development
+
+The web application leverages Flask for backend functionality and Bootstrap for a user-friendly frontend. The application takes user input for relevant clinical features and utilizes the trained model to generate severity predictions.
 <h3> App development</h3>
  <p>The web app, leveraging Bootstrap for frontend development and Flask for backend functionality, incorporates Bootstrap for rapid interface design and Flask for processing the five user-input features and utilizing the saved model to generate predictions. </p> 
  <p>The Dockerfile snippet encapsulates the web app, including the saved model and other files, into a Docker image. It initializes a Python 3.11 environment, copies local files to the /app_dir directory, installs dependencies from requirements.txt, exposes a specified port, and initiates a Gunicorn server with four workers, binding to the designated port and launching the Flask application named my_app. </p>
