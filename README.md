@@ -65,42 +65,37 @@
 
 
 <div>
-    5. Web Application Development
-
-The web application leverages Flask for backend functionality and Bootstrap for a user-friendly frontend. The application takes user input for relevant clinical features and utilizes the trained model to generate severity predictions.
-<h3> App development</h3>
- <p>The web app, leveraging Bootstrap for frontend development and Flask for backend functionality, incorporates Bootstrap for rapid interface design and Flask for processing the five user-input features and utilizing the saved model to generate predictions. </p> 
- <p>The Dockerfile snippet encapsulates the web app, including the saved model and other files, into a Docker image. It initializes a Python 3.11 environment, copies local files to the /app_dir directory, installs dependencies from requirements.txt, exposes a specified port, and initiates a Gunicorn server with four workers, binding to the designated port and launching the Flask application named my_app. </p>
+<h3> 5. Web Application Development</h3>
+ <p> The web application leverages Flask for backend functionality and Bootstrap for a user-friendly frontend. The application takes user input for relevant clinical features and utilizes the trained model to generate severity predictions. </p>
 </div>
 
 <div>
-<h3>Dockerfile Deployment</h3>
-<p>The Dockerfile, which encapsulates the web app and model, is deployed to Render. Render was chosen as the deployment platform because it offers a free tier for hobbyists to showcase their work.</p>
-    <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.56.jpeg" alt="Render_deployment1" title="Render1">
-  
-  <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.41.jpeg" alt="Render_deployment" title="Render">
+    <h3> 6. Deployment</h3>
+    <p>The web application is containerized using Docker for easy deployment and management. The containerized application is then deployed on a platform like Render, allowing users to access it remotely.</p>
+        <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.56.jpeg" alt="Render_deployment1" title="Render1">
+      <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.41.jpeg" alt="Render_deployment" title="Render">
   
 </div>
 
 <div>
-<h3>Installation</h3>
-To install, fork the repository, clone to github desktop and open with VS code, run the web app local using python app.py.
-<h3>Usage</h3>
-The webapp can be access through https://coding-project.onrender.com
-   <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.54.jpeg" alt="webapp_deployment" title="webapp">
+    <h3>7. Installation and Usage</h3>
+    <h3>Local Installation</h3>
+    <p>To install, fork the repository, clone to github desktop and open with VS code, run the web app local using python app.py. </p>
+    <h3>Web Access</h3>
+    <p>The webapp can be access through https://coding-project.onrender.com </p>
+    <img src="https://github.com/ojumah20/covid_19_project/blob/main/Image%2024-04-2024%20at%2019.54.jpeg" alt="webapp_deployment" title="webapp">
 
   
 </div>
 
 <div>
-<h3>Limitations and Room for Contributions</h3>
-<ul> <li>
- There is a need for error handling especailly when a user input a text or anything other than a float.
-</li>
-<li>Other classsification models can be explored to see if they give better model performance</li>
- <li>The look and feel of the web app can also be improved</li>
-</ul>
+    <h3> 8. Limitations and Future Work </h3>
+    <p>The project acknowledges limitations such as Error handling for non-numerical user inputs and Potential for improvement in the user interface design. </p>
+    <p>Future exploration could involve evaluating other classification models for potentially better performance and enhancing user experience and incorporating additional features.</p>
 </div>
 
-<p> I am very open to contributions and feedback.</p>
-expand_more
+<div> 
+    <h3>9. Conclusion </h3>
+    <p> This project demonstrates the feasibility of applying machine learning to predict COVID-19 severity. The developed web app offers a convenient tool for healthcare professionals or researchers to gain insights into potential disease course. We encourage contributions and feedback to further refine and improve this project.</p>
+
+</div>
