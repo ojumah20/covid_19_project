@@ -90,7 +90,7 @@
 
 <div>
     <h3> 8. Limitations and Future Work </h3>
-    <p>The project acknowledges limitations such as Error handling for non-numerical user inputs and Potential for improvement in the user interface design. </p>
+    <p>The project acknowledges limitations such as Error handling  and Potential for improvement in the user interface design. </p>
     <p>Future exploration could involve evaluating other classification models for potentially better performance and enhancing user experience and incorporating additional features.</p>
 </div>
 
